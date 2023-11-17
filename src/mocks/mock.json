@@ -1,0 +1,520 @@
+[
+   {
+      "usinasSolares":[
+         {
+            "id":1,
+            "nome":"Usina Solar A",
+            "localizacao":"Cidade A",
+            "capacidade":"50 MW",
+            "status":"Operacional",
+            "latitude":-23.5505,
+            "longitude":-46.6333,
+            "anoConstrucao":2018,
+            "fabricantePaineis":"SolarTech",
+            "descricao":"A Usina Solar A é uma instalação fotovoltaica moderna que utiliza tecnologia de ponta para gerar eletricidade a partir da luz do sol.",
+            "producao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":250
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":180
+               },
+               {
+                  "mes":"Março",
+                  "valor":300
+               },
+               {
+                  "mes":"Abril",
+                  "valor":400
+               },
+               {
+                  "mes":"Maio",
+                  "valor":350
+               },
+               {
+                  "mes":"Junho",
+                  "valor":420
+               },
+               {
+                  "mes":"Julho",
+                  "valor":460
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":430
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":380
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":320
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":290
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":250
+               }
+            ],
+            "irradiacao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":1750
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":1600
+               },
+               {
+                  "mes":"Março",
+                  "valor":1850
+               },
+               {
+                  "mes":"Abril",
+                  "valor":2000
+               },
+               {
+                  "mes":"Maio",
+                  "valor":2200
+               },
+               {
+                  "mes":"Junho",
+                  "valor":2400
+               },
+               {
+                  "mes":"Julho",
+                  "valor":2500
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":2400
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":2200
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":2000
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":1850
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":1750
+               }
+            ],
+            "anoUltimaManutencao":2022,
+            "eficienciaPaineis":"88%",
+            "proprietario":"Companhia Energética ABC",
+            "tipoConexao":"Conectada à rede",
+            "subestacao":"Subestação ABC",
+            "tempoVidaEstimado":"25 anos",
+            "certificacoes":[
+               "ISO 9001",
+               "ISO 14001"
+            ],
+            "imagem":"https://i.imgur.com/8BPlNq0.jpeg",
+            "engenheiroResponsavel":"João Silva",
+            "areaTotal":"100 hectares",
+            "garantiaEquipamentos":"5 anos",
+            "contratoEnergia":"Venda para a rede elétrica",
+            "monitoramentoRemoto":true
+         },
+         {
+            "id":2,
+            "nome":"Usina Solar B",
+            "localizacao":"Cidade B",
+            "capacidade":"75 MW",
+            "status":"Operacional",
+            "latitude":-22.9068,
+            "longitude":-43.1729,
+            "anoConstrucao":2019,
+            "fabricantePaineis":"SunPower",
+            "descricao":"A Usina Solar B é uma instalação fotovoltaica avançada que utiliza tecnologia de alta eficiência para gerar eletricidade a partir da luz do sol.",
+            "producao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":300
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":220
+               },
+               {
+                  "mes":"Março",
+                  "valor":350
+               },
+               {
+                  "mes":"Abril",
+                  "valor":450
+               },
+               {
+                  "mes":"Maio",
+                  "valor":400
+               },
+               {
+                  "mes":"Junho",
+                  "valor":480
+               },
+               {
+                  "mes":"Julho",
+                  "valor":510
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":480
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":420
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":360
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":330
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":300
+               }
+            ],
+            "irradiacao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":1800
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":1650
+               },
+               {
+                  "mes":"Março",
+                  "valor":1900
+               },
+               {
+                  "mes":"Abril",
+                  "valor":2100
+               },
+               {
+                  "mes":"Maio",
+                  "valor":2300
+               },
+               {
+                  "mes":"Junho",
+                  "valor":2500
+               },
+               {
+                  "mes":"Julho",
+                  "valor":2600
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":2500
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":2300
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":2100
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":1900
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":1800
+               }
+            ],
+            "anoUltimaManutencao":2023,
+            "eficienciaPaineis":"90%",
+            "proprietario":"Empresa de Energia XYZ",
+            "tipoConexao":"Conectada à rede",
+            "subestacao":"Subestação XYZ",
+            "tempoVidaEstimado":"30 anos",
+            "certificacoes":[
+               "ISO 9001",
+               "ISO 14001",
+               "OHSAS 18001"
+            ],
+            "imagem":"https://i.imgur.com/8BPlNq0.jpeg",
+            "engenheiroResponsavel":"Maria Oliveira",
+            "areaTotal":"120 hectares",
+            "garantiaEquipamentos":"7 anos",
+            "contratoEnergia":"Venda para a rede elétrica",
+            "monitoramentoRemoto":true
+         },
+         {
+            "id":3,
+            "nome":"Usina Solar C",
+            "localizacao":"Cidade C",
+            "capacidade":"60 MW",
+            "status":"Operacional",
+            "latitude":-27.5954,
+            "longitude":-48.5480,
+            "anoConstrucao":2020,
+            "fabricantePaineis":"SunTech",
+            "descricao":"A Usina Solar C é uma instalação fotovoltaica eficiente que utiliza tecnologia de ponta para gerar eletricidade a partir da luz do sol.",
+            "producao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":280
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":200
+               },
+               {
+                  "mes":"Março",
+                  "valor":330
+               },
+               {
+                  "mes":"Abril",
+                  "valor":430
+               },
+               {
+                  "mes":"Maio",
+                  "valor":380
+               },
+               {
+                  "mes":"Junho",
+                  "valor":450
+               },
+               {
+                  "mes":"Julho",
+                  "valor":490
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":460
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":400
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":340
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":310
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":280
+               }
+            ],
+            "irradiacao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":1700
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":1550
+               },
+               {
+                  "mes":"Março",
+                  "valor":1800
+               },
+               {
+                  "mes":"Abril",
+                  "valor":2000
+               },
+               {
+                  "mes":"Maio",
+                  "valor":2200
+               },
+               {
+                  "mes":"Junho",
+                  "valor":2400
+               },
+               {
+                  "mes":"Julho",
+                  "valor":2450
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":2350
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":2150
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":1950
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":1800
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":1700
+               }
+            ],
+            "anoUltimaManutencao":2022,
+            "eficienciaPaineis":"87%",
+            "proprietario":"Energia Renovável S.A.",
+            "tipoConexao":"Conectada à rede",
+            "subestacao":"Subestação Renovável",
+            "tempoVidaEstimado":"28 anos",
+            "certificacoes":[
+               "ISO 9001",
+               "ISO 14001",
+               "ISO 45001"
+            ],
+            "imagem":"https://i.imgur.com/8BPlNq0.jpeg",
+            "engenheiroResponsavel":"Carlos Santos",
+            "areaTotal":"110 hectares",
+            "garantiaEquipamentos":"6 anos",
+            "contratoEnergia":"Venda para a rede elétrica",
+            "monitoramentoRemoto":true
+         },
+         {
+            "id":4,
+            "nome":"Usina Solar D",
+            "localizacao":"Cidade D",
+            "capacidade":"90 MW",
+            "status":"Operacional",
+            "latitude":-20.3155,
+            "longitude":-40.3128,
+            "anoConstrucao":2017,
+            "fabricantePaineis":"JinkoSolar",
+            "descricao":"A Usina Solar D é uma instalação fotovoltaica avançada que utiliza tecnologia de última geração para gerar eletricidade a partir da luz do sol.",
+            "producao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":320
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":240
+               },
+               {
+                  "mes":"Março",
+                  "valor":370
+               },
+               {
+                  "mes":"Abril",
+                  "valor":480
+               },
+               {
+                  "mes":"Maio",
+                  "valor":430
+               },
+               {
+                  "mes":"Junho",
+                  "valor":500
+               },
+               {
+                  "mes":"Julho",
+                  "valor":540
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":510
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":450
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":390
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":360
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":320
+               }
+            ],
+            "irradiacao":[
+               {
+                  "mes":"Janeiro",
+                  "valor":1850
+               },
+               {
+                  "mes":"Fevereiro",
+                  "valor":1700
+               },
+               {
+                  "mes":"Março",
+                  "valor":1950
+               },
+               {
+                  "mes":"Abril",
+                  "valor":2150
+               },
+               {
+                  "mes":"Maio",
+                  "valor":2350
+               },
+               {
+                  "mes":"Junho",
+                  "valor":2550
+               },
+               {
+                  "mes":"Julho",
+                  "valor":2650
+               },
+               {
+                  "mes":"Agosto",
+                  "valor":2550
+               },
+               {
+                  "mes":"Setembro",
+                  "valor":2350
+               },
+               {
+                  "mes":"Outubro",
+                  "valor":2150
+               },
+               {
+                  "mes":"Novembro",
+                  "valor":1950
+               },
+               {
+                  "mes":"Dezembro",
+                  "valor":1850
+               }
+            ],
+            "anoUltimaManutencao":2021,
+            "eficienciaPaineis":"92%",
+            "proprietario":"Energia Limpa Ltda.",
+            "tipoConexao":"Conectada à rede",
+            "subestacao":"Subestação Limpa",
+            "tempoVidaEstimado":"30 anos",
+            "certificacoes":[
+               "ISO 9001",
+               "ISO 14001"
+            ],
+            "imagem":"https://i.imgur.com/8BPlNq0.jpeg",
+            "engenheiroResponsavel":"Ana Rodrigues",
+            "areaTotal":"150 hectares",
+            "garantiaEquipamentos":"8 anos",
+            "contratoEnergia":"Venda para a rede elétrica",
+            "monitoramentoRemoto":true
+         }
+      ]
+   }
+]
