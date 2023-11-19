@@ -18,6 +18,10 @@ const Content = styled.main`
       font-weight: 500;
     }
   }
+
+  @media (max-width: 520px) {
+    padding: 3.2rem 1.375rem;
+  }
 `
 
 const CardsList = styled.div`
