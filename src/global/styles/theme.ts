@@ -21,7 +21,7 @@ export default {
     newSmall: '1',
     regular: '1.125',
     newRegular: '1.25',
-    mediam: '1.625',
+    mediam: '1.425',
     large: '2',
   },
 }

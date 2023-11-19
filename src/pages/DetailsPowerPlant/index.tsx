@@ -1,7 +1,12 @@
-import { ChartBar, ChartLine, ChartLineUp } from 'phosphor-react'
 import { useState } from 'react'
+import { ChartBar, ChartLine, ChartLineUp } from 'phosphor-react'
 import Chart from 'react-apexcharts'
+import { BoxDetailsPowerPlant } from '../../components/BoxDetailsPowerPlant'
 import { useParams } from 'react-router-dom'
+
+import { generateAreaChartOptions } from '../../utils/generateAreaChartOptions'
+import { generateBarChartOptions } from '../../utils/generateBarChartOptions'
+import { generateLineChartOptions } from '../../utils/generateLineChartOptions'
 
 import MOCKS_DATA from '../../mocks/mock.json'
 import Styles from './styles'
@@ -14,316 +19,61 @@ export function DetailsPowerPlant() {
 
   const { id } = useParams()
 
-  const filteredPowerPlant = powerPlants.filter(
+  const [filteredPowerPlant] = powerPlants.filter(
     (powerPlant) => powerPlant.id === Number(id),
   )
 
-  const categoriesChart = filteredPowerPlant[0].irradiacao.map(
+  const categoriesChart = filteredPowerPlant.irradiacao.map(
     (powerPlant) => powerPlant.mes,
   )
 
-  const seriesIrradiationData = filteredPowerPlant[0].irradiacao.map(
+  const seriesIrradiationData = filteredPowerPlant.irradiacao.map(
     (powerPlant) => powerPlant.valor,
   )
 
-  const seriesProductionData = filteredPowerPlant[0].producao.map(
+  const seriesProductionData = filteredPowerPlant.producao.map(
     (powerPlant) => powerPlant.valor,
   )
-
-  const generateLineChartOptions = (
-    seriesData: unknown,
-    titleText: string,
-  ) => ({
-    options: {
-      chart: {
-        id: 'line-chart',
-        type: 'line',
-        stacked: true,
-        toolbar: {
-          show: true,
-          tools: {
-            download: true,
-          },
-        },
-        zoom: {
-          enabled: false,
-        },
-        background: 'transparent',
-      },
-      colors: ['#FF7F0E', '#FFAE66'],
-      xaxis: {
-        categories: categoriesChart,
-      },
-      title: {
-        text: titleText,
-        align: 'left',
-        margin: 10,
-        offsetX: 10,
-        offsetY: -10,
-        floating: false,
-        style: {
-          fontSize: '24px',
-          fontWeight: 'bold',
-          fontFamily: 'Roboto',
-          color: '#FFFFFF',
-        },
-      },
-      grid: {
-        borderColor: '#FFFFFF33',
-        strokeDashArray: [5],
-      },
-      labels: {
-        style: {
-          fontFamily: 'Roboto',
-          colors: [
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-          ],
-        },
-      },
-      axisBorder: {
-        color: '#FFFFFF66',
-      },
-      axisTicks: {
-        color: '#FFFFFF66',
-      },
-      legend: {
-        position: 'bottom',
-      },
-      theme: {
-        mode: 'dark',
-      },
-      fill: {
-        opacity: 1,
-      },
-    },
-    series: [
-      {
-        name: 'Irradiação',
-        data: seriesData,
-      },
-    ],
-  })
-
-  const generateBarChartOptions = (seriesData: unknown, titleText: string) => ({
-    options: {
-      chart: {
-        id: 'bar-chart',
-        type: 'bar',
-        stacked: true,
-        toolbar: {
-          show: true,
-          tools: {
-            download: true,
-          },
-        },
-        zoom: {
-          enabled: false,
-        },
-        background: 'transparent',
-      },
-      colors: ['#FF7F0E', '#FFAE66'],
-      xaxis: {
-        categories: categoriesChart,
-      },
-      yaxis: {
-        labels: {
-          formatter: function (value: number) {
-            return value.toLocaleString() + ' Wh/m²'
-          },
-        },
-      },
-      title: {
-        text: titleText,
-        align: 'left',
-        margin: 10,
-        offsetX: 10,
-        offsetY: -10,
-        floating: false,
-        style: {
-          fontSize: '24px',
-          fontWeight: 'bold',
-          fontFamily: 'Roboto',
-          color: '#FFFFFF',
-        },
-      },
-      grid: {
-        borderColor: '#FFFFFF33',
-        strokeDashArray: [5],
-      },
-      labels: {
-        style: {
-          fontFamily: 'Roboto',
-          colors: [
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-          ],
-        },
-      },
-      axisBorder: {
-        color: '#FFFFFF66',
-      },
-      axisTicks: {
-        color: '#FFFFFF66',
-      },
-      legend: {
-        position: 'bottom',
-      },
-      theme: {
-        mode: 'dark',
-      },
-      fill: {
-        opacity: 1,
-      },
-    },
-    series: [
-      {
-        name: 'Irradiação',
-        data: seriesData,
-      },
-    ],
-  })
-
-  const generateAreaChartOptions = (
-    seriesData: unknown,
-    titleText: string,
-  ) => ({
-    options: {
-      chart: {
-        id: 'area-chart',
-        type: 'area',
-        stacked: true,
-        toolbar: {
-          show: true,
-          tools: {
-            download: true,
-          },
-        },
-        zoom: {
-          enabled: false,
-        },
-        background: 'transparent',
-      },
-      colors: ['#FF7F0E', '#FFAE66'],
-      xaxis: {
-        categories: categoriesChart,
-      },
-      title: {
-        text: titleText,
-        align: 'left',
-        margin: 10,
-        offsetX: 10,
-        offsetY: -10,
-        floating: false,
-        style: {
-          fontSize: '24px',
-          fontWeight: 'bold',
-          fontFamily: 'Roboto',
-          color: '#FFFFFF',
-        },
-      },
-      grid: {
-        borderColor: '#FFFFFF33',
-        strokeDashArray: [5],
-      },
-      labels: {
-        style: {
-          fontFamily: 'Roboto',
-          colors: [
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-            '#FFFFFF99',
-          ],
-        },
-      },
-      axisBorder: {
-        color: '#FFFFFF66',
-      },
-      axisTicks: {
-        color: '#FFFFFF66',
-      },
-      legend: {
-        position: 'bottom',
-      },
-      theme: {
-        mode: 'dark',
-      },
-      fill: {
-        opacity: 1,
-      },
-    },
-    series: [
-      {
-        name: 'Irradiação',
-        data: seriesData,
-      },
-    ],
-  })
 
   const lineChartIrradiation = generateLineChartOptions(
+    categoriesChart,
     seriesIrradiationData,
     'Irradiação',
   )
 
   const lineChartProduction = generateLineChartOptions(
+    categoriesChart,
     seriesProductionData,
     'Produção',
   )
 
   const barChartIrradiation = generateBarChartOptions(
+    categoriesChart,
     seriesIrradiationData,
     'Irradiação',
   )
 
   const barChartProduction = generateBarChartOptions(
+    categoriesChart,
     seriesProductionData,
     'Produção',
   )
 
   const areaChartIrradiation = generateAreaChartOptions(
+    categoriesChart,
     seriesIrradiationData,
     'Irradiação',
   )
 
   const areaChartProduction = generateAreaChartOptions(
+    categoriesChart,
     seriesProductionData,
     'Produção',
   )
 
   return (
     <Styles.Container>
-      <Styles.InfoPowerPlant>
-        <h1>ID da planta de energia: {id}</h1>
-      </Styles.InfoPowerPlant>
+      <BoxDetailsPowerPlant />
 
       <Styles.IrradiationContainer>
         <Styles.ToggleChartButtons>
