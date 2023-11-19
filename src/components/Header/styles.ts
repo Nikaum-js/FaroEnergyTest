@@ -98,6 +98,10 @@ const Header = styled.header`
       margin-left: 12px;
     }
   }
+
+  @media (max-width: 520px) {
+    padding: 0 1.375rem;
+  }
 `
 
 export default {
