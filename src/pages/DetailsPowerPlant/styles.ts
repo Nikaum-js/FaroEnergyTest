@@ -8,6 +8,10 @@ const Container = styled.div`
 
   width: 100%;
   padding: 0 4.375rem;
+
+  @media (max-width: 520px) {
+    padding: 0 1.375rem;
+  }
 `
 
 const InfoPowerPlant = styled.div`
